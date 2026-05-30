@@ -1,0 +1,7 @@
+---
+- name: Get variable values from inc=ventory
+  hosts: lh
+  tasks:
+    - name: print the variables
+      ansible.builtin.debug:
+        msg: "{{USERNAME}}"

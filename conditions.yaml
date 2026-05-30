@@ -1,0 +1,10 @@
+---
+- name: Conditions
+  hosts: localhost
+  vars:
+    a: 11
+  tasks:
+    - name: Conditions
+      ansible.builtin.debug:
+        msg: "a < 10"
+      when: "{{ a < 10 }}"

@@ -1,0 +1,10 @@
+---
+- name: get the value from vault
+  hosts: localhost
+  connection: local
+  vars_files:
+    - pass-vault.yaml
+  tasks:
+    - name: get the vault from vault
+      ansible.builtin.debug:
+        msg: "{{ password }}"
